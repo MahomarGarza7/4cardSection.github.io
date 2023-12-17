@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root{
+    --popins:'Poppins', sans-serif;
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--very-light-gray);
+    font-family: var(--popins);
+    margin-top: 3rem;
+}
+.content{
+    
+    max-width: 375px;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-column: 100%;
+    grid-template-rows: 40% 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "head"
+    "sec1"
+    "sec2"
+    "sec3"
+    "sec4";
+    gap: 20px;
+    padding: 0 20px;
+    
+}
+.content__grid{
+   
+    height: 200px;
+    margin: 0 25px;
+    padding: 10px 20px 20px 20px;
+   
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.201);
+    padding: 10 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+   
+    
+    
+}
+.content__grid--lol{
+    display: block;
+    background-color: transparent;
+    grid-area: head;
+    box-shadow: 0 2.5px 10px 0 rgba(0, 0, 0, 0);
+    text-align: center;
+   
+    
+
+}
+
+.content__grid--1{
+    grid-area: sec1;
+    border-top: 5px solid var(--cyan-color);
+
+}
+.content__grid--lool{
+    grid-area: sec2;
+    border-top: 5px solid var(--red-color);
+    
+}
+.content__grid--111{
+    grid-area: sec3;
+    border-top: 5px solid var(--orange-color);
+    
+}
+.content__grid--1111{
+    grid-area: sec4;
+    border-top: 5px solid var(--blue-color);
+    
+}
+.content img{
+    height: 45px;
+    width: 45px;
+    align-self: flex-end;
+    
+    
+    
+   
+    
+}
+.paragrap{
+    color: var(--very-dark-blue);
+    font-weight: 100;
+    font-size: 0.9rem;
+   
+
+
+}
+
+   
+    
+
+.title1{
+    font-weight: 100;
+    font-size:large;
+}
+.title1 +.title{
+    font-size: large;
+
+}
+.title1 +.title +.paragrap{
+    margin-top: 0.7rem;
+    font-size: small;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+@media (min-width:900px) {
+    body{
+        overflow: hidden;
+       
+    }
+    .content{
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-rows: 200px 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "textt textt textt"
+        ".    reed  ."
+        "cel  reed  azu"
+        "cel  ama  azu"
+        ".    ama  ."
+        ;
+        gap: 40px 25px;
+        
+        padding: 0 40px;
+        
+        
+        
+        
+        
+    
+    }
+    .content__grid{
+        min-width: 300px;
+        width: 200px;
+        margin: 0 auto;
+        z-index: initial;
+        right: 0;
+       
+    }
+    .content__grid--lol{
+        grid-area: textt;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        
+        
+    }
+    .content__grid--1{
+        grid-area:cel ;
+        
+        
+       
+        
+
+    }
+    .content__grid--lool{
+        grid-area: reed;
+        position: relative;
+        
+    }
+    .content__grid--111{
+        
+        grid-area:ama;
+    }
+    .content__grid--1111{
+        grid-area: azu;
+    }
+}
